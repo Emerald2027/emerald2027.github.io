@@ -14,8 +14,8 @@ body {
   background-color: #0c0c0c;
   color: var(--header);
   width: 100%;
-  overflow: auto;
-
+  overflow-x: hidden;
+  min-height: 100vh;
   font-family: "fixedsys";
 }
 a {
@@ -97,7 +97,45 @@ h2 {
 
 #bottom {
   position: fixed;
-  bottom: 10;
+  bottom: 10px;
   width: 100%;
   text-align: center;
+}
+
+.crt {
+  text-shadow:
+    0 0 0.05em currentColor,
+    1px 1px rgba(255, 0, 255, 0.2),
+    -1px -1px rgba(0, 255, 255, 0.15);
+  position: relative;
+}
+
+.crt:before,
+.crt:after {
+  content: "";
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.crt:before {
+  background: repeating-linear-gradient(
+    rgba(218, 49, 49, 0.21) 0px,
+    rgba(112, 159, 115, 0.21) 2px,
+    rgba(40, 129, 206, 0.21) 4px
+  );
+}
+
+.crt:after {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(218, 49, 49, 0.21) 1px,
+    rgba(112, 159, 115, 0.21) 2px,
+    rgba(40, 129, 206, 0.21) 3px
+  );
 }
