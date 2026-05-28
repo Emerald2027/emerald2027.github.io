@@ -1,10 +1,93 @@
 <html>
   <head>
-    <title>Under Construction</title>
+    <title>Website Title Goes Here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
     <link rel="stylesheet" href="style.css" />
-    <h1>This website is under construction, please check back later!</h1>
+    <h1 id="title">Welcome!<span id="cursor"></span></h1>
+    <div id="wrapper">
+      <div id="left">
+        <fieldset>
+          <legend>navigation</legend>
+        </fieldset>
+        <fieldset>
+          <legend>my time</legend>
+          <div id="time"></div>
+        </fieldset>
+        <fieldset>
+          <legend>status</legend>
+        </fieldset>
+        <fieldset>
+          <legend>changelog</legend>
+        </fieldset>
+      </div>
+      <div id="center">
+        <div id="welcome">
+          <fieldset>
+            <h2>Welcome to my website!</h2>
+            <p>
+              Hi, I'm Alice! Thanks for stopping on my little corner of the
+              internet. I created this website to try and make a place for me to
+              talk about my hobbies outside of traditional social media. Its
+              currently under construction so expect new features to be added
+              soon!
+            </p>
+          </fieldset>
+        </div>
+        <div id="about">
+          <fieldset>
+            <legend>about me</legend>
+            <div id="me">
+              <h3>me:</h3>
+              <ul>
+                <li>name: alice</li>
+                <li>birthday: 6/30</li>
+              </ul>
+            </div>
+            <div id="favorites">
+              <h3>favorites:</h3>
+              <ul>
+                <li>color: blue</li>
+                <li>book: annihilation</li>
+                <li>musician: lex walton</li>
+              </ul>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div id="right">
+        <fieldset>
+          <legend>find me</legend>
+          <ul id="contact">
+            <li>
+              <a href="https://www.instagram.com/alice.sperre/">Instagram</a>
+            </li>
+            <li>
+              <a href="https://x.com/Emerald2027_">Twitter</a>
+            </li>
+            <li>
+              <a href="https://steamcommunity.com/profiles/76561199111412620/"
+                >Steam</a
+              >
+            </li>
+            <li>
+              <a href="https://letterboxd.com/Emerald2027/">Letterboxd</a>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+    </div>
+    <div id="bottom">
+      <div id="stickers">
+        <img src="/images/ILikeComputer.jpg" alt="i like computer" />
+        <img src="images/LinuxPowered.gif" alt="linux powered" />
+        <img src="images/Trans.jpg" alt="trans" />
+      </div>
+      <footer>Website Created 5/27/2026</footer>
+    </div>
+    <script src="scripts/welcome.js"></script>
+    <script src="scripts/time.js"></script>
   </body>
 </html>
