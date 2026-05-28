@@ -2,11 +2,49 @@
   <head>
     <title>Welcome to my Website!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-
-  <body class="crt">
     <link rel="stylesheet" href="style.css" />
-    <h1 id="title">Welcome!<span id="cursor"></span></h1>
+  </head>
+  <body class="crt">
+    <div id="title-bar">
+      <h1 id="title">Welcome!<span id="cursor"></span></h1>
+      <button id="hamburger">☰</button>
+    </div>
+    <div id="mobile-menu">
+      <div class="left-content">
+        <fieldset>
+          <legend>navigation</legend>
+        </fieldset>
+        <fieldset>
+          <legend>my time</legend>
+          <div class="time"></div>
+        </fieldset>
+        <fieldset>
+          <legend>status</legend>
+        </fieldset>
+        <fieldset>
+          <legend>changelog</legend>
+        </fieldset>
+      </div>
+      <fieldset>
+        <legend>find me</legend>
+        <ul id="contact">
+          <li>
+            <a href="https://www.instagram.com/alice.sperre/">Instagram</a>
+          </li>
+          <li>
+            <a href="https://x.com/Emerald2027_">Twitter</a>
+          </li>
+          <li>
+            <a href="https://steamcommunity.com/profiles/76561199111412620/"
+              >Steam</a
+            >
+          </li>
+          <li>
+            <a href="https://letterboxd.com/Emerald2027/">Letterboxd</a>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
     <div id="wrapper">
       <div id="left">
         <fieldset>
@@ -14,7 +52,7 @@
         </fieldset>
         <fieldset>
           <legend>my time</legend>
-          <div id="time"></div>
+          <div class="time"></div>
         </fieldset>
         <fieldset>
           <legend>status</legend>
@@ -89,5 +127,6 @@
     </div>
     <script src="scripts/welcome.js"></script>
     <script src="scripts/time.js"></script>
+    <script src="scripts/menu-toggle.js"></script>
   </body>
 </html>
