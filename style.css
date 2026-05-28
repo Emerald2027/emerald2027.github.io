@@ -3,6 +3,7 @@
   --header: #ffcc00;
   --highlight: #ffb000;
   --dim: #3d3000;
+  --background: #0c0c0c;
 }
 
 @font-face {
@@ -11,12 +12,14 @@
 }
 
 body {
-  background-color: #0c0c0c;
+  background-color: var(--background);
   color: var(--header);
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
   font-family: "fixedsys";
+  display: flex;
+  flex-direction: column;
 }
 a {
   font-style: italic;
@@ -45,7 +48,8 @@ h3 {
   margin-bottom: 0;
 }
 h1 {
-  width: 300px;
+  width: 100%;
+  text-align: center;
   margin: auto;
 }
 h2 {
@@ -62,6 +66,69 @@ h2 {
   }
 }
 
+#title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  color: var(--header);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 11;
+}
+#mobile-menu {
+  display: none;
+  position: fixed;
+  top: 16;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.98);
+  z-index: 10;
+  padding: 20px;
+  overflow-y: auto;
+}
+#mobile-menu.open {
+  display: block;
+}
+#mobile-menu .left-content {
+  display: none;
+}
+#close-menu {
+  color: var(--header);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+  #right {
+    display: none;
+  }
+}
+
+@media (max-width: 428px) {
+  #left {
+    display: none;
+  }
+  #mobile-menu .left-content {
+    display: block;
+  }
+}
+
 #wrapper {
   display: flex;
   justify-content: center;
@@ -70,7 +137,7 @@ h2 {
 #left {
   width: 200px;
 }
-#time {
+.time {
   display: flex;
   justify-content: center;
 }
@@ -96,18 +163,9 @@ h2 {
 }
 
 #bottom {
-  position: fixed;
-  bottom: 10px;
   width: 100%;
   text-align: center;
-}
-
-.crt {
-  text-shadow:
-    0 0 0.05em currentColor,
-    1px 1px rgba(255, 0, 255, 0.2),
-    -1px -1px rgba(0, 255, 255, 0.15);
-  position: relative;
+  margin-top: auto;
 }
 
 .crt:before,
@@ -125,17 +183,17 @@ h2 {
 
 .crt:before {
   background: repeating-linear-gradient(
-    rgba(218, 49, 49, 0.21) 0px,
-    rgba(112, 159, 115, 0.21) 2px,
-    rgba(40, 129, 206, 0.21) 4px
+    rgba(218, 49, 49, 0.5) 0px,
+    rgba(112, 159, 115, 0.5) 2px,
+    rgba(40, 129, 206, 0.5) 4px
   );
 }
 
 .crt:after {
   background: repeating-linear-gradient(
     90deg,
-    rgba(218, 49, 49, 0.21) 1px,
-    rgba(112, 159, 115, 0.21) 2px,
-    rgba(40, 129, 206, 0.21) 3px
+    rgba(218, 49, 49, 0.5) 1px,
+    rgba(112, 159, 115, 0.5) 2px,
+    rgba(40, 129, 206, 0.5) 3px
   );
 }
