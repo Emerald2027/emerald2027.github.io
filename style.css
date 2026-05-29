@@ -161,6 +161,9 @@ h2 {
 #right {
   width: 200px;
 }
+.contact {
+  list-style-type: none;
+}
 
 #bottom {
   width: 100%;
