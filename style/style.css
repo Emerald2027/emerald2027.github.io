@@ -144,7 +144,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
-#changelog-content {
+.changelog-content {
   max-height: 150px;
   overflow-y: auto;
 }
