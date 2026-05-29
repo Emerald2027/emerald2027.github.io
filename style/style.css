@@ -144,6 +144,10 @@ h2 {
   display: flex;
   justify-content: center;
 }
+#changelog-content {
+  max-height: 150px;
+  overflow-y: auto;
+}
 
 #center {
   width: 800px;
