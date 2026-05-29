@@ -1,0 +1,168 @@
+:root {
+  --text: #ffb000;
+  --header: #ffcc00;
+  --highlight: #ffb000;
+  --dim: #3d3000;
+  --background: #0c0c0c;
+  --msgBG: #181200;
+  --border: #805800;
+  --pmBorder: #5c4308;
+  --pmBG: #120e02;
+  --name: #fff0d0;
+}
+
+@font-face {
+  font-family: "fixedsys";
+  src: url(https://emerald2027.github.io/fonts/FSEX302.ttf);
+}
+body {
+  font-family: "fixedsys";
+  color: var(--text);
+  font-size: 12px;
+}
+#background,
+#settingsMenu {
+  background-size: 100px 100px;
+  background-attachment: local;
+  background-repeat: repeat;
+}
+#settingsMenu p {
+  color: var(--text);
+}
+#settingsMenu h2 {
+  color: var(--header);
+}
+#top_banner {
+  height: 20px;
+  background: transparent;
+  color: transparent;
+  z-index: 4;
+}
+.allMessages {
+  background-color: #181200;
+  background-size: 100px 100px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  position: relative;
+}
+.allMessages.containtsOnlyEmojis.emoji {
+  height: 50px;
+}
+.msgWrapper:has(.pm) {
+  padding-top: 26px;
+}
+.allMessages.pm {
+  border-color: var(--pmBorder);
+}
+.allMessages.pm:after {
+  content: "Private Message";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--text);
+  height: 20px;
+  padding: 5px;
+  position: absolute;
+  right: 5vw;
+  bottom: 100%;
+  z-index: 5;
+  border-radius: 5px 5px 0 0;
+}
+.msgWrapper + .msgWrapper {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+#timestamp {
+  font-size: 8.25vw;
+  margin-top: 10px !important;
+}
+#input {
+  background-color: var(--msgBG);
+  border-radius: 5px;
+  border: 2px solid var(--dim);
+  font-family: "fixedsys";
+  width: calc(100% - 44px);
+}
+#input:focus {
+  border: 2px solid var(--border);
+}
+#name {
+  background-color: var(--msgBG);
+  border-radius: 0px;
+  border: solid 1px var(--name);
+  padding: 2px;
+  font-family: "fixedsys";
+}
+#settings:hover {
+  filter: drop-shadow(0 0 3px var(--text)) drop-shadow(0 0 3px var(--text))
+    drop-shadow(0 0 3px var(--text));
+  transform: rotate(180deg);
+}
+#settings {
+  position: relative;
+  top: -296px;
+  right: 0px;
+  filter: drop-shadow(0 0 1px var(--text)) drop-shadow(0 0 1px var(--text))
+    drop-shadow(0 0 1px var(--text));
+  transition: all 250ms linear;
+}
+#emojiTrayToggle {
+  height: 15px;
+  width: 15px;
+  padding: 6px;
+  margin-top: 6px;
+  margin-left: 3px;
+  background-image: url(/images/emoji.png) !important;
+  opacity: 0.5;
+}
+#is_typing {
+  filter: drop-shadow(0 0 1px var(--text)) drop-shadow(0 0 1px var(--text))
+    drop-shadow(0 0 1px var(--text));
+  background-color: var(--text);
+  border: solid 1px var(--name);
+  border-radius: 3px;
+  left: unset;
+  right: 10px;
+  bottom: 27px;
+  overflow: visible;
+}
+#is_typing:hover::after {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  content: "Someone is typing";
+  font-size: 10pt;
+  position: fixed;
+  right: 35px;
+  bottom: 0px;
+  width: 50vw;
+  color: var(--background);
+  z-index: 1000000;
+}
+#is_typing > span {
+  background-color: var(--name);
+  border-radius: 0;
+  height: 2px;
+  width: 2px;
+}
+p.senderInfo {
+  color: var(--name);
+  font-size: 13px;
+}
+#input:empty::before {
+  content: "hit enter to send!";
+  color: var(--pmBorder);
+}
+.sent {
+  border: 2px solid var(--highlight);
+  border-radius: 15px 15px 2px 15px;
+  position: relative;
+  display: inline-block;
+}
+.recieved {
+  border: 2px solid var(--border);
+  border-radius: 15px 15px 15px 2px;
+  position: relative;
+  display: inline-block;
+}
